@@ -1,5 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import './App.css';
+import StatusBar from './components/StatusBar';
+import SaveBtn from './components/SaveBtn';
 
 function App() {
   // onChange와 연결되어 있는 값을 바로 사용하기 보단 완전히 결정되었을 때 사용하는 값(name)을 따로 두어 쓰기
@@ -60,6 +62,9 @@ function App() {
       <button onClick={onClick}>확인</button>
       <p>이름의 길이 : {memoCountName}</p>
       <p>성 : {memoTakeWord}</p>
+      <hr/>
+      <StatusBar/>
+      <SaveBtn/>
     </div>
   );
 }
